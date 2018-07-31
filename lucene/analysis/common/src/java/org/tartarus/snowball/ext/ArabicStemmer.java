@@ -11,7 +11,7 @@ import org.tartarus.snowball.Among;
  * It implements the stemming algorithm defined by a snowball script.
  */
 
-@SuppressWarnings("unused") public class Arabic2Stemmer extends org.tartarus.snowball.SnowballProgram {
+@SuppressWarnings("unused") public class ArabicStemmer extends org.tartarus.snowball.SnowballProgram {
 
     private static final long serialVersionUID = 1L;
 
@@ -585,7 +585,7 @@ import org.tartarus.snowball.Among;
                             slice_from("\u0644\u0627");
                             break;
                         case 50:
-                            // (, line 310
+                            // (, line 310c
                             // <-, line 310
                             slice_from("\u0644\u0623");
                             break;
@@ -595,7 +595,6 @@ import org.tartarus.snowball.Among;
                             slice_from("\u0644\u0625");
                             break;
                         case 52:
-                            // (, line 312
                             // <-, line 312
                             slice_from("\u0644\u0622");
                             break;
@@ -1901,11 +1900,11 @@ import org.tartarus.snowball.Among;
     }
 
     public boolean equals( Object o ) {
-        return o instanceof Arabic2Stemmer;
+        return o instanceof ArabicStemmer;
     }
 
     public int hashCode() {
-        return Arabic2Stemmer.class.getName().hashCode();
+        return ArabicStemmer.class.getName().hashCode();
     }
 
 
