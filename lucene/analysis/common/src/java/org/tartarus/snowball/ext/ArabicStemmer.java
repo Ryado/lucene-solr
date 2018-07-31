@@ -585,7 +585,7 @@ import org.tartarus.snowball.Among;
                             slice_from("\u0644\u0627");
                             break;
                         case 50:
-                            // (, line 310c
+                            // (, line 310
                             // <-, line 310
                             slice_from("\u0644\u0623");
                             break;
@@ -595,6 +595,7 @@ import org.tartarus.snowball.Among;
                             slice_from("\u0644\u0625");
                             break;
                         case 52:
+                            // (, line 312
                             // <-, line 312
                             slice_from("\u0644\u0622");
                             break;
