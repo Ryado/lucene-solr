@@ -73,8 +73,8 @@ public class TestSnowballVocab extends LuceneTestCase {
         return new TokenStreamComponents(t, new SnowballFilter(t, snowballLanguage));
       }  
     };
-    
-    assertVocabulary(a, getDataPath("TestSnowballVocabData.zip"), 
+
+    assertVocabulary(a, getDataPath("TestSnowballVocabData.zip"),
         dataDirectory + "/voc.txt", dataDirectory + "/output.txt");
     a.close();
   }
