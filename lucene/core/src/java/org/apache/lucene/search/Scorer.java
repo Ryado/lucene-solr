@@ -158,6 +158,13 @@ public abstract class Scorer {
   }
 
   /**
+   * Return the value of {@code minCompetitiveScore}.
+   */
+  public Float getMinCompetitiveScore() {
+    return null;
+  }
+
+  /**
    * Advance to the block of documents that contains {@code target} in order to
    * get scoring information about this block. This method is implicitly called
    * by {@link DocIdSetIterator#advance(int)} and

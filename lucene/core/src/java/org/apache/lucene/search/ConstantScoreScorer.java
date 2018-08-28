@@ -29,6 +29,8 @@ public final class ConstantScoreScorer extends Scorer {
   private final TwoPhaseIterator twoPhaseIterator;
   private final DocIdSetIterator disi;
 
+  private Float minCompetitiveScore = null;
+
   /** Constructor based on a {@link DocIdSetIterator} which will be used to
    *  drive iteration. Two phase iteration will not be supported.
    *  @param weight the parent weight
@@ -76,6 +78,17 @@ public final class ConstantScoreScorer extends Scorer {
   @Override
   public float score() throws IOException {
     return score;
+  }
+
+  @Override
+  public void setMinCompetitiveScore(float minScore) {
+    this.minCompetitiveScore = minScore;
+    System.out.println("###########################");
+  }
+
+  @Override
+  public Float getMinCompetitiveScore() {
+    return this.minCompetitiveScore;
   }
 
 }
