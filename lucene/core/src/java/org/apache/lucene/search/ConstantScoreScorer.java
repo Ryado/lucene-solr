@@ -83,7 +83,7 @@ public final class ConstantScoreScorer extends Scorer {
   @Override
   public void setMinCompetitiveScore(float minScore) {
     this.minCompetitiveScore = minScore;
-    System.out.println("###########################");
+    System.out.println("########################### VALUE SET TO: "+ this.minCompetitiveScore);
   }
 
   @Override
