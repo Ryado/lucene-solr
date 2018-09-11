@@ -151,6 +151,16 @@
       </restrict>
     </replaceregexp>
 
+    <replaceregexp match="^new Among(*$" replace="private static final long serialVersionUID = 1L; ${line.separator} /* patched */ private static final java.lang.invoke.MethodHandles.Lookup methodObject = java.lang.invoke.MethodHandles.lookup();" flags="m" encoding="UTF-8">
+      <restrict>
+        <fileset refid="snowball.programs"/>
+        <rsel:not>
+          <rsel:contains text="patched"/>
+        </rsel:not>
+      </restrict>
+    </replaceregexp>
+
+
     <fixcrlf srcdir="${snowball.programs.dir}" includes="*Stemmer.java" tab="remove" tablength="2" encoding="UTF-8" javafiles="yes" fixlast="yes"/>
   </target>
 </project>
