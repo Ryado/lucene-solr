@@ -141,7 +141,7 @@
       </restrict>
     </replaceregexp>
 
-    <replaceregexp match="new Among\(.*(?=\))" replace="\0, &quot;&quot;, methodObject" flags="g" encoding="UTF-8">
+    <replaceregexp match="new Among\(([^,]*,[^,]*,[^,]*?)(?=\))" replace="\0, &quot;&quot;, methodObject" flags="g" encoding="UTF-8">
       <restrict>
         <fileset refid="snowball.programs"/>
         <rsel:not>
@@ -150,6 +150,16 @@
       </restrict>
     </replaceregexp>
 
+
+
+    <replaceregexp match="(new Among\([^,]*,[^,]*,[^,]*,[^,]*,)[^,]*?(?=\))" replace="\1 methodObject" flags="g" encoding="UTF-8">
+      <restrict>
+        <fileset refid="snowball.programs"/>
+        <rsel:not>
+          <rsel:contains text="patched"/>
+        </rsel:not>
+      </restrict>
+    </replaceregexp>
 
     <replaceregexp match="(?:find_among(?:|_b)\()(.*?)(?=\))" replace="\0, \1.length" flags="g" encoding="UTF-8">
       <restrict>
